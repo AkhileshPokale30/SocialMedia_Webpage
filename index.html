@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <title>3D Social media Icon Hover Effects </title>
+<link rel="stylesheet" type="text/css"href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="socialMedia">
+        <ul class="sci">
+            <li data-text="Github" data-color="#171515">
+                <a href="https://github.com/AkhileshPokale-IND" class="github"><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li data-text="LinkedIn" data-color="#171515">
+                <a href="https://www.linkedin.com/in/akhileshpokale/" class="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li data-text="Facebook" data-color="#1877f2">
+                <a href="#" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>               
+            </li>
+            <li data-text="Youtube" data-color="#ff0000">
+                <a href="#" class="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li data-text="Twitter" data-color="#0099ff">
+                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li data-text="Instagram" data-color="#e4405f">
+                <a href="https://www.instagram.com/invites/contact/?i=1qa2fwbzbsxk3&utm_content=1za9aup" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+    VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+        max: 30,
+        speed: 400,
+        glare: true,
+        "max-glare":1,
+    });
+
+
+        let list = document.querySelectorAll('.sci li');
+        let bg = document.querySelector('.socialMedia');
+        list.forEach(elements => {
+            elements.addEventListener('mouseenter',function
+            (event){
+                let color = event.target.getAttribute
+                ('data-color');
+                bg.style.backgroundcolor = color;
+            })
+            elements.addEventListener('mouseleave',function
+            (event){
+                bg.style.backgroundcolor='#fff';
+            })
+        })
+    </script>
+</body>
+</html>
